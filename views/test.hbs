@@ -1,0 +1,22 @@
+<button id="rusername" type="button" class="rusername">Generate</button>
+<p id="namebox"></p>
+
+<script>
+    document.getElementById('rusername').addEventListener('click', async () => {
+        const write = await fetch('/write-to-username-file', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ textData: "namerequest" })
+        });
+        const result = await write.text();
+        alert('username generated');
+        try {
+            // Request the file data from the Node.js endpoint
+            const read = await fetch('read-username-file');
+            const text = await read.text();
+            document.getElementById('namebox').innerText = text;
+        } catch (error) {
+            console.error('Fetch error:', error);
+        }
+    });
+</script>
