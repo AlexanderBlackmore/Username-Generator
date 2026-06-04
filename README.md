@@ -36,3 +36,17 @@ Frontend - HTML:
     });
 </script>
 ```
+
+## How to Run Test File
+
+Install NPM:
+
+```bash
+npm install
+```
+
+Start the microservice:
+
+```bash
+npm start
+```
