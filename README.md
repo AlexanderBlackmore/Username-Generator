@@ -1,6 +1,9 @@
 # Username-Generator
 Hey Jonathan, 
-To call on the microservice, utilize a function (or functions) that writes 'namerequest' into the connected txt file and then reads the txt file such as:
+
+In essence, the microservice waits until a specified command word is entered into its connected txt file and then draws from a bank of adjectives and nouns randomly to generate a username.
+
+To call on the microservice, utilize a function (or functions) that writes 'namerequest' (if unchanged) into the connected txt file and then reads the txt file such as:
 
 Backend - Javascript:
 ```javascript
